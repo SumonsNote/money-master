@@ -29,22 +29,21 @@ document.getElementById("calculate").addEventListener("click", function () {
   balanceTotal.innerText = balance;
 });
 
-const savingId = document.getElementById('saving-id').addEventListener('click', function () {
-    const saving = document.getElementById('saving-input');
+const savingId = document.getElementById("saving-id").addEventListener("click", function () {
+    const saving = document.getElementById("saving-input");
     const savingInput = saving.value;
     const savingAmount = parseFloat(savingInput);
-    saving.value = '';
+    saving.value = "";
 
     const balance = document.getElementById("total-balance");
     const balanceText = balance.innerText;
     const balanceTotalAmount = parseFloat(balanceText);
     const saveAmount = (balanceTotalAmount * savingAmount) / 100;
-    
-    const saveAmountMoney = document.getElementById('saving-amount');
+
+    const saveAmountMoney = document.getElementById("saving-amount");
     saveAmountMoney.innerText = saveAmount;
 
-    const remainingBalanceTotal = document.getElementById('remain-balance');
-    const remainingBalance = balanceTotalAmount - saveAmount
-    remainingBalanceTotal.innerText = remainingBalance
-
-})
+    const remainingBalanceTotal = document.getElementById("remain-balance");
+    const remainingBalance = balanceTotalAmount - saveAmount;
+    remainingBalanceTotal.innerText = remainingBalance;
+  });
