@@ -34,38 +34,39 @@
                     <div class="input-field text-center text-white">
                         <div class="input">
                             <h5 class="my-3">Income:</h5>
-                            <input type="text">
+                            <input id="income" type="text">
                         </div>
                         <h2 class="text-white text-center my-3">Expenses</h2>
                         <div class="input">
                             <h5>Food:</h5>
-                            <input type="text">
+                            <input id="food" type="text">
                         </div>
                         <div class="input">
                             <h5>Rent:</h5>
-                            <input type="text">
+                            <input id="rent" type="text">
                         </div>
                         <div class="input">
                             <h5>Clothes:</h5>
-                            <input type="text">
+                            <input id="cloth" type="text">
                         </div>
-                        <button class="bg-primary text-white px-4 py-2 border-0 mt-3 fw-bold">Calculate</button>
+                        <button id="calculate" class="bg-primary text-white px-4 py-2 border-0 mt-3 fw-bold">Calculate</button>
                         <div class="mt-4">
-                            <h3>Total Expenses: <span>00</span></h3>
-                            <h3>Balance: <span>00</span></h3>
+                            <h3>Total Expenses: <span id="total-expenses">00</span></h3>
+                            <h3>Balance: <span id="total-balance">00</span></h3>
                         </div>
                         <div class="saving">
-                            <span>Save: </span><input type="text"> % <button class="bg-primary text-white fw-bold border-0 px-3 py-2">Save</button>
+                            <span>Save: </span><input id="saving-input" type="text"> % <button class="bg-primary text-white fw-bold border-0 px-3 py-2" id="saving-id">Save</button>
                         </div>
                         <div class="mt-4">
-                            <h3>Saving Amount: <span>00</span></h3>
-                            <h3>Remaining Balance: <span>00</span></h3>
+                            <h3>Saving Amount: <span id="saving-amount">00</span></h3>
+                            <h3>Remaining Balance: <span id="remain-balance">00</span></h3>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <script src="app.js"></script>
 </body>
 
 </html>
