@@ -33,8 +33,13 @@ document.getElementById("calculate").addEventListener("click", function () {
   const balance = income - totalExpenses;
 
   // Error handle for income amount
-  if (income < totalExpenses) {
-    alert('Your income is less than expenses');
+  if (income < 0 || food < 0 || rent < 0 || cloth < 0) {
+    alert('Input valid number');
+  }
+  else {
+    if (income < totalExpenses) {
+      alert("Your income is less than expenses");
+    }
   }
 
   // Using of Handle calculate button with event listener
