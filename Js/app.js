@@ -7,6 +7,14 @@ function getInput(inputId) {
   return inputAmount;
 }
 
+// Function for innerText
+function getInnerTextValue(innerTextValue) {
+  const innerValue = document.getElementById(innerTextValue);
+  const innerText = innerValue.innerText;
+  const innerTextAmount = parseFloat(innerText);
+  return innerTextAmount;
+}
+
 // Function to set value from input
 function setInputValue(inputValueSet, money) {
   const setValue = document.getElementById(inputValueSet);
@@ -32,19 +40,13 @@ document.getElementById("calculate").addEventListener("click", function () {
 // Event listene for saving section
 const savingId = document.getElementById("saving-id").addEventListener("click", function () {
     // Using of Function to get input from user
-    const saving = getInput('saving-input');
+    const saving = getInput("saving-input");
 
-    const balance = document.getElementById("total-balance");
-    const balanceText = balance.innerText;
-    const balanceAmount = parseFloat(balanceText);
-
-    const expensesMoney = document.getElementById('total-expenses');
-    const expensesText = expensesMoney.innerText;
-    const expensesAmount = parseFloat(expensesText);
+    // Using of Function for innerText
+    const balanceAmount = getInnerTextValue("total-balance");
+    const expensesAmount = getInnerTextValue("total-expenses");
 
     const balanceTotalAmount = balanceAmount + expensesAmount;
-
-
     const saveAmount = (balanceTotalAmount * saving) / 100;
 
     // Using of Handle calculate button with event listener
