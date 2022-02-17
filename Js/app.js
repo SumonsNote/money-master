@@ -70,4 +70,7 @@ document.getElementById("calculate").addEventListener("click", function () {
     if (saveAmount > balanceAmount) {
       alert('Saving amount is more than balance');
     }
+    else if (saveAmount < 0) {
+      alert('Input valid number');
+    }
   });
