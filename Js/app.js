@@ -36,13 +36,21 @@ const savingId = document.getElementById("saving-id").addEventListener("click", 
 
     const balance = document.getElementById("total-balance");
     const balanceText = balance.innerText;
-    const balanceTotalAmount = parseFloat(balanceText);
+    const balanceAmount = parseFloat(balanceText);
+
+    const expensesMoney = document.getElementById('total-expenses');
+    const expensesText = expensesMoney.innerText;
+    const expensesAmount = parseFloat(expensesText);
+
+    const balanceTotalAmount = balanceAmount + expensesAmount;
+
+
     const saveAmount = (balanceTotalAmount * saving) / 100;
 
     // Using of Handle calculate button with event listener
     setInputValue("saving-amount", saveAmount);
 
     const remainingBalanceTotal = document.getElementById("remain-balance");
-    const remainingBalance = balanceTotalAmount - saveAmount;
+    const remainingBalance = balanceAmount - saveAmount;
     remainingBalanceTotal.innerText = remainingBalance;
   });
