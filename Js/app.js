@@ -32,13 +32,18 @@ document.getElementById("calculate").addEventListener("click", function () {
   const totalExpenses = food + rent + cloth;
   const balance = income - totalExpenses;
 
+  // Error handle for income amount
+  if (income < totalExpenses) {
+    alert('Your income is less than expenses');
+  }
+
   // Using of Handle calculate button with event listener
   setInputValue("total-expenses", totalExpenses);
   setInputValue("total-balance", balance);
 });
 
 // Event listene for saving section
-const savingId = document.getElementById("saving-id").addEventListener("click", function () {
+  const savingId = document.getElementById("saving-id").addEventListener("click", function () {
     // Using of Function to get input from user
     const saving = getInput("saving-input");
 
@@ -55,4 +60,9 @@ const savingId = document.getElementById("saving-id").addEventListener("click", 
     const remainingBalanceTotal = document.getElementById("remain-balance");
     const remainingBalance = balanceAmount - saveAmount;
     remainingBalanceTotal.innerText = remainingBalance;
+
+    // Error handle for saving amount
+    if (saveAmount > balanceAmount) {
+      alert('Saving amount is more than balance');
+    }
   });
